@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.Interactivity;
+using ZhoskaRabotaem.ViewModels;
 
 namespace ZhoskaRabotaem.Views;
 
@@ -19,20 +20,19 @@ public partial class RegWindow : Window
         {
             IsAdmin = true;
             var win = new MainWindow(IsAdmin);
+            win.DataContext = new MainWindowViewModel();
             win.Show();
 
         }
         else
         {
             var win = new MainWindow();
+            win.DataContext = new MainWindowViewModel();
             win.Show();
 
         }
-    
-   
+        
         this.Close();
-        
-        
         
     }
 }

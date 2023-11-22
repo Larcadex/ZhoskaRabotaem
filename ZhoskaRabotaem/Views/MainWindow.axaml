@@ -1,20 +1,47 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:ZhoskaRabotaem.ViewModels"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="ZhoskaRabotaem.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/favicon.ico"
-        Title="ZhoskaRabotaem">
-
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-
-    <TextBlock Name="RoleBlock" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+<Window xmlns="https://github.com/avaloniaui" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:vm="using:ZhoskaRabotaem.ViewModels" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:models="clr-namespace:ZhoskaRabotaem.Models" 
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" 
+        x:Class="ZhoskaRabotaem.Views.MainWindow" 
+        x:DataType="vm:MainWindowViewModel" 
+        Icon="/Assets/favicon.ico" 
+        Title="ZhoskaRabotaem"> 
+     
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"> 
+        <StackPanel> 
+             
+            <DataGrid Margin="20" ItemsSource="{Binding People}" 
+                      GridLinesVisibility="All" 
+                      BorderThickness="1" BorderBrush="Gray"> 
+                
+                <DataGrid.Columns> 
+                    
+                    <DataGridTextColumn Header="First Name" Width="2*" MaxWidth="200"
+                                        Binding="{Binding FirstName}" /> 
+                    <DataGridTextColumn Header="Last Name"  Width="2*" MaxWidth="200"
+                                        Binding="{Binding LastName}" /> 
+           
+                    <DataGridTemplateColumn Header="Age"> 
+                        <DataGridTemplateColumn.CellTemplate> 
+                            <DataTemplate DataType="models:Person"> 
+                                <TextBlock Text="{Binding AgeInYears, StringFormat='{}{0} years'}"  
+                                           VerticalAlignment="Center" HorizontalAlignment="Center" /> 
+                            </DataTemplate> 
+                        </DataGridTemplateColumn.CellTemplate> 
+                        <DataGridTemplateColumn.CellEditingTemplate> 
+                            <DataTemplate DataType="models:Person"> 
+                                <NumericUpDown Value="{Binding AgeInYears}"   
+                                               FormatString="N0" Minimum="0" Maximum="120"   
+                                               HorizontalAlignment="Stretch"/> 
+                            </DataTemplate> 
+                        </DataGridTemplateColumn.CellEditingTemplate> 
+                    </DataGridTemplateColumn> 
+         
+                </DataGrid.Columns> 
+            </DataGrid> 
+        </StackPanel> 
+    </ScrollViewer> 
 </Window>
