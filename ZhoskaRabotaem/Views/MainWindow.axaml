@@ -1,42 +1,40 @@
+<!-- MainWindow.xaml -->
 <Window xmlns="https://github.com/avaloniaui" 
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
         xmlns:vm="using:ZhoskaRabotaem.ViewModels" 
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-        xmlns:models="clr-namespace:ZhoskaRabotaem.Models" 
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" 
         x:Class="ZhoskaRabotaem.Views.MainWindow" 
         x:DataType="vm:MainWindowViewModel" 
         Icon="/Assets/favicon.ico" 
         Title="ZhoskaRabotaem">
+
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
     
     <Window.Styles>
         <Style Selector="Window">
             <Setter Property="Background" Value="#181A21"/>
             <Setter Property="Padding" Value="20"/>
-
         </Style>
     </Window.Styles>
      
     <DockPanel Width="">
-        
         <DockPanel.Styles>
-            
-            <Style Selector="Border" >
+            <Style Selector="Border">
                 <Setter Property="Background" Value="#32353c"/>
             </Style>
-         
-            
             <Style Selector="TextBlock">
                 <Setter Property="Foreground" Value="#1999ff"/>
                 <Setter Property="FontWeight" Value="500"/>
                 <Setter Property="FontSize" Value="12"/> 
                 <Setter Property="LetterSpacing" Value="0.4"/> 
             </Style>
-            
         </DockPanel.Styles>
          
-        <DataGrid Margin="20" ItemsSource="{Binding People}" 
+        <DataGrid Margin="20" ItemsSource="{Binding Products}" 
                   GridLinesVisibility="All" 
                   BorderThickness="1" BorderBrush="Gray"
                   IsReadOnly="True"
@@ -48,16 +46,14 @@
                      
             
             <DataGrid.Columns>
-                <!--<DataGridTextColumn Header="№" Width="2*" MaxWidth="60"
-                                    Binding="{Binding count}"  />  -->
+                <DataGridTextColumn Header="ID продукта" Width="2*" MaxWidth="60"
+                                    Binding="{Binding id}"  /> 
                 <DataGridTextColumn Header="Наименование продукта" Width="2*" MaxWidth="300"
-                                    Binding="{Binding FirstName}"  /> 
+                                    Binding="{Binding product_name}"  /> 
                 <DataGridTextColumn Header="Описание"  Width="2*" MaxWidth="300"
-                                    Binding="{Binding LastName}" /> 
+                                    Binding="{Binding description}" /> 
                 <DataGridTextColumn Header="Цена"  Width="2*" MaxWidth="300"
-                                    Binding="{Binding AgeInYears}"    /> 
-       
-                
+                                    Binding="{Binding price}"    /> 
             </DataGrid.Columns> 
         </DataGrid> 
     </DockPanel> 
