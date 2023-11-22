@@ -8,40 +8,57 @@
         x:Class="ZhoskaRabotaem.Views.MainWindow" 
         x:DataType="vm:MainWindowViewModel" 
         Icon="/Assets/favicon.ico" 
-        Title="ZhoskaRabotaem"> 
+        Title="ZhoskaRabotaem">
+    
+    <Window.Styles>
+        <Style Selector="Window">
+            <Setter Property="Background" Value="#181A21"/>
+            <Setter Property="Padding" Value="20"/>
+
+        </Style>
+    </Window.Styles>
      
-    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"> 
-        <StackPanel> 
-             
-            <DataGrid Margin="20" ItemsSource="{Binding People}" 
-                      GridLinesVisibility="All" 
-                      BorderThickness="1" BorderBrush="Gray"> 
-                
-                <DataGrid.Columns> 
-                    
-                    <DataGridTextColumn Header="First Name" Width="2*" MaxWidth="200"
-                                        Binding="{Binding FirstName}" /> 
-                    <DataGridTextColumn Header="Last Name"  Width="2*" MaxWidth="200"
-                                        Binding="{Binding LastName}" /> 
-           
-                    <DataGridTemplateColumn Header="Age"> 
-                        <DataGridTemplateColumn.CellTemplate> 
-                            <DataTemplate DataType="models:Person"> 
-                                <TextBlock Text="{Binding AgeInYears, StringFormat='{}{0} years'}"  
-                                           VerticalAlignment="Center" HorizontalAlignment="Center" /> 
-                            </DataTemplate> 
-                        </DataGridTemplateColumn.CellTemplate> 
-                        <DataGridTemplateColumn.CellEditingTemplate> 
-                            <DataTemplate DataType="models:Person"> 
-                                <NumericUpDown Value="{Binding AgeInYears}"   
-                                               FormatString="N0" Minimum="0" Maximum="120"   
-                                               HorizontalAlignment="Stretch"/> 
-                            </DataTemplate> 
-                        </DataGridTemplateColumn.CellEditingTemplate> 
-                    </DataGridTemplateColumn> 
+    <DockPanel Width="">
+        
+        <DockPanel.Styles>
+            
+            <Style Selector="Border" >
+                <Setter Property="Background" Value="#32353c"/>
+            </Style>
          
-                </DataGrid.Columns> 
-            </DataGrid> 
-        </StackPanel> 
-    </ScrollViewer> 
+            
+            <Style Selector="TextBlock">
+                <Setter Property="Foreground" Value="#1999ff"/>
+                <Setter Property="FontWeight" Value="500"/>
+                <Setter Property="FontSize" Value="12"/> 
+                <Setter Property="LetterSpacing" Value="0.4"/> 
+            </Style>
+            
+        </DockPanel.Styles>
+         
+        <DataGrid Margin="20" ItemsSource="{Binding People}" 
+                  GridLinesVisibility="All" 
+                  BorderThickness="1" BorderBrush="Gray"
+                  IsReadOnly="True"
+                  CanUserSortColumns="False"
+                  VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Auto"
+                  VerticalAlignment="Stretch"
+                  HorizontalAlignment="Stretch">
+                     
+            
+            <DataGrid.Columns>
+                <!--<DataGridTextColumn Header="№" Width="2*" MaxWidth="60"
+                                    Binding="{Binding count}"  />  -->
+                <DataGridTextColumn Header="Наименование продукта" Width="2*" MaxWidth="300"
+                                    Binding="{Binding FirstName}"  /> 
+                <DataGridTextColumn Header="Описание"  Width="2*" MaxWidth="300"
+                                    Binding="{Binding LastName}" /> 
+                <DataGridTextColumn Header="Цена"  Width="2*" MaxWidth="300"
+                                    Binding="{Binding AgeInYears}"    /> 
+       
+                
+            </DataGrid.Columns> 
+        </DataGrid> 
+    </DockPanel> 
 </Window>
