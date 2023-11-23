@@ -1,41 +1,41 @@
 <!-- MainWindow.xaml -->
-<Window xmlns="https://github.com/avaloniaui" 
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-        xmlns:vm="using:ZhoskaRabotaem.ViewModels" 
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" 
-        x:Class="ZhoskaRabotaem.Views.MainWindow" 
-        x:DataType="vm:MainWindowViewModel" 
-        Icon="/Assets/favicon.ico" 
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ZhoskaRabotaem.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ZhoskaRabotaem.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/favicon.ico"
         Title="ZhoskaRabotaem">
 
-    <Window.DataContext>
-        <vm:MainWindowViewModel/>
-    </Window.DataContext>
-    
-    <Window.Styles>
-        <Style Selector="Window">
-            <Setter Property="Background" Value="#181A21"/>
-            <Setter Property="Padding" Value="20"/>
-        </Style>
-    </Window.Styles>
-     
-    <DockPanel Width="">
-        <DockPanel.Styles>
-            <Style Selector="Border">
-                <Setter Property="Background" Value="#32353c"/>
-            </Style>
-            <Style Selector="TextBlock">
-                <Setter Property="Foreground" Value="#1999ff"/>
-                <Setter Property="FontWeight" Value="500"/>
-                <Setter Property="FontSize" Value="12"/> 
-                <Setter Property="LetterSpacing" Value="0.4"/> 
-            </Style>
-        </DockPanel.Styles>
-         
-        <DataGrid Margin="20" ItemsSource="{Binding Products}" 
-                  GridLinesVisibility="All" 
+	<Window.DataContext>
+		<vm:MainWindowViewModel/>
+	</Window.DataContext>
+
+	<Window.Styles>
+		<Style Selector="Window">
+			<Setter Property="Background" Value="#181A21"/>
+			<Setter Property="Padding" Value="20"/>
+		</Style>
+	</Window.Styles>
+
+	<DockPanel Width="">
+		<DockPanel.Styles>
+			<Style Selector="Border">
+				<Setter Property="Background" Value="#32353c"/>
+			</Style>
+			<Style Selector="TextBlock">
+				<Setter Property="Foreground" Value="#1999ff"/>
+				<Setter Property="FontWeight" Value="500"/>
+				<Setter Property="FontSize" Value="12"/>
+				<Setter Property="LetterSpacing" Value="0.4"/>
+			</Style>
+		</DockPanel.Styles>
+
+		<DataGrid Margin="20" ItemsSource="{Binding Products}"
+                  GridLinesVisibility="All"
                   BorderThickness="1" BorderBrush="Gray"
                   IsReadOnly="True"
                   CanUserSortColumns="False"
@@ -43,18 +43,24 @@
                   HorizontalScrollBarVisibility="Auto"
                   VerticalAlignment="Stretch"
                   HorizontalAlignment="Stretch">
-                     
-            
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="ID продукта" Width="2*" MaxWidth="60"
-                                    Binding="{Binding id}"  /> 
-                <DataGridTextColumn Header="Наименование продукта" Width="2*" MaxWidth="300"
-                                    Binding="{Binding product_name}"  /> 
-                <DataGridTextColumn Header="Описание"  Width="2*" MaxWidth="300"
-                                    Binding="{Binding description}" /> 
-                <DataGridTextColumn Header="Цена"  Width="2*" MaxWidth="300"
-                                    Binding="{Binding price}"    /> 
-            </DataGrid.Columns> 
-        </DataGrid> 
-    </DockPanel> 
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="ID продукта" Width="2*" MaxWidth="60"
+                                    Binding="{Binding id}"  />
+				<DataGridTextColumn Header="Наименование продукта" Width="2*" MaxWidth="300"
+                                    Binding="{Binding product_name}"  />
+				<DataGridTextColumn Header="Описание"  Width="2*" MaxWidth="300"
+                                    Binding="{Binding description}" />
+				<DataGridTextColumn Header="Цена"  Width="2*" MaxWidth="300"
+                                    Binding="{Binding price}"    />
+				<DataGridTemplateColumn Header="Выбрать" Width="2*" MaxWidth="60">
+					<DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<CheckBox IsChecked="{Binding isselected, Mode=TwoWay}" />
+						</DataTemplate>
+					</DataGridTemplateColumn.CellTemplate>
+				</DataGridTemplateColumn>
+				
+			</DataGrid.Columns>
+		</DataGrid>
+	</DockPanel>
 </Window>
