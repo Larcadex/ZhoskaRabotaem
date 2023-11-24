@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\glkho\\Source\\Repos\\ZhoskaRabotaem\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj": {}
+    "C:\\Users\\glkho\\source\\repos\\meow\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\glkho\\Source\\Repos\\ZhoskaRabotaem\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj": {
+    "C:\\Users\\glkho\\source\\repos\\meow\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\glkho\\Source\\Repos\\ZhoskaRabotaem\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj",
+        "projectUniqueName": "C:\\Users\\glkho\\source\\repos\\meow\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj",
         "projectName": "ZhoskaRabotaem",
-        "projectPath": "C:\\Users\\glkho\\Source\\Repos\\ZhoskaRabotaem\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj",
+        "projectPath": "C:\\Users\\glkho\\source\\repos\\meow\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj",
         "packagesPath": "C:\\Users\\glkho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\glkho\\Source\\Repos\\ZhoskaRabotaem\\ZhoskaRabotaem\\obj\\",
+        "outputPath": "C:\\Users\\glkho\\source\\repos\\meow\\ZhoskaRabotaem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\glkho\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -52,15 +52,41 @@
                                     Binding="{Binding description}" />
 				<DataGridTextColumn Header="Цена"  Width="2*" MaxWidth="300"
                                     Binding="{Binding price}"    />
-				<DataGridTemplateColumn Header="Выбрать" Width="2*" MaxWidth="60">
+
+				<DataGridTemplateColumn Header="Кол - во" Width="2*" MaxWidth="250">
 					<DataGridTemplateColumn.CellTemplate>
 						<DataTemplate>
-							<CheckBox IsChecked="{Binding isselected, Mode=TwoWay}" />
+							<ButtonSpinner  Height="20" Width="130" ButtonSpinnerLocation="Right"
+											Spin="ButtonSpinner_Spin">
+								0
+							</ButtonSpinner>
 						</DataTemplate>
 					</DataGridTemplateColumn.CellTemplate>
 				</DataGridTemplateColumn>
-				
+
+				<DataGridTemplateColumn Header="Добавить" Width="2*" MaxWidth="100">
+					<DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<Button Name="check_button"
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									Background="#2D73FF"
+									Content="*"
+									HorizontalContentAlignment="Center"
+									VerticalContentAlignment="Top"
+									Foreground="White"
+									Width="30"
+									Height="20"
+									CornerRadius="2 "
+									FontWeight="400" FontSize="12"
+									BorderBrush="Transparent"
+								CommandParameter="{Binding}" />
+						</DataTemplate>
+					</DataGridTemplateColumn.CellTemplate>
+				</DataGridTemplateColumn>
+
 			</DataGrid.Columns>
+			
 		</DataGrid>
 	</DockPanel>
 </Window>

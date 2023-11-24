@@ -1,5 +1,8 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
+using Avalonia.Interactivity;
+using System;
+using System.Runtime.CompilerServices;
 using ZhoskaRabotaem.ViewModels;
 
 namespace ZhoskaRabotaem.Views;
@@ -10,6 +13,8 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         ((MainWindowViewModel)DataContext).InitializeData();
+
+
     }
     public MainWindow(bool Role)
     {
@@ -18,5 +23,19 @@ public partial class MainWindow : Window
             InitializeComponent();
             ((MainWindowViewModel)DataContext).InitializeData();
         }
+    }
+
+    private void ButtonSpinner_Spin(object? sender, Avalonia.Controls.SpinEventArgs e)
+    {
+        ButtonSpinner spinner = sender as ButtonSpinner;
+
+        int value = Convert.ToInt32(spinner.Content);
+
+        if (e.Direction == SpinDirection.Increase)
+            value++;
+        else
+            value--;
+        spinner.Content = value;
+
     }
 }

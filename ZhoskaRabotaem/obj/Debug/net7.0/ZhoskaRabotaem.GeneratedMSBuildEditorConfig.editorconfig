@@ -13,13 +13,13 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ZhoskaRabotaem
-build_property.ProjectDir = C:\Users\glkho\Source\Repos\ZhoskaRabotaem\ZhoskaRabotaem\
+build_property.ProjectDir = C:\Users\glkho\source\repos\meow\ZhoskaRabotaem\
 
-[C:/Users/glkho/Source/Repos/ZhoskaRabotaem/ZhoskaRabotaem/App.axaml]
+[C:/Users/glkho/source/repos/meow/ZhoskaRabotaem/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/glkho/Source/Repos/ZhoskaRabotaem/ZhoskaRabotaem/Views/MainWindow.axaml]
+[C:/Users/glkho/source/repos/meow/ZhoskaRabotaem/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/glkho/Source/Repos/ZhoskaRabotaem/ZhoskaRabotaem/Views/RegWindow.axaml]
+[C:/Users/glkho/source/repos/meow/ZhoskaRabotaem/Views/RegWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

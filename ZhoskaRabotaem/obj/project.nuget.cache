@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ktIJB0kGpKNBSnJ2zF4UtFUXr8qUKJUC6vfFF5lSQIwNmtruRbyGkzxBjNhVqNrjtIoBXDFZc9EVueR4coFsxg==",
+  "dgSpecHash": "MAXUXy12W8KmzETZFRyHRdJwx5uxXRlo8KNmS3LjpnbrliwMsOSa6dM5Q4i/eycLXsohTfOI9+M5tMQVXSnm4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\glkho\\Source\\Repos\\ZhoskaRabotaem\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj",
+  "projectFilePath": "C:\\Users\\glkho\\source\\repos\\meow\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\glkho\\.nuget\\packages\\avalonia\\11.0.5\\avalonia.11.0.5.nupkg.sha512",
     "C:\\Users\\glkho\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.0.2023020321\\avalonia.angle.windows.natives.2.1.0.2023020321.nupkg.sha512",
