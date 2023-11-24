@@ -5,6 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        WindowState="Maximized"
         x:Class="ZhoskaRabotaem.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/favicon.ico"
@@ -21,8 +22,8 @@
 		</Style>
 	</Window.Styles>
 
-	<DockPanel Width="">
-		<DockPanel.Styles>
+	<StackPanel Width="" >
+		<StackPanel.Styles>
 			<Style Selector="Border">
 				<Setter Property="Background" Value="#32353c"/>
 			</Style>
@@ -32,7 +33,39 @@
 				<Setter Property="FontSize" Value="12"/>
 				<Setter Property="LetterSpacing" Value="0.4"/>
 			</Style>
-		</DockPanel.Styles>
+			
+			<Style Selector="Button:pointerover /template/ ContentPresenter">
+				<Setter Property="TextBlock.Foreground" Value="White"/>
+				<Setter Property="Background" Value="#2D73FF"/>
+			</Style>
+		</StackPanel.Styles>
+		
+		<DockPanel>
+			
+			<Button Name="AddMenu"
+			        HorizontalAlignment="Left"
+			        VerticalAlignment="Center"
+			        Background="#2D73FF"
+			        Content="Добавить"
+			        HorizontalContentAlignment="Center"
+			        VerticalContentAlignment="Top"
+			        Foreground="White"
+			        Width="67"
+			        Height="25"
+			        CornerRadius="2 "
+			        FontWeight="500" FontSize="10"
+			        BorderBrush="Transparent"
+			        Margin="20,0,0,0"
+			        Click="Addmenu"
+			        IsVisible="False"
+			        CommandParameter="{Binding}" />
+			
+			<TextBlock Name="RoleBlock"
+			           Text="Пользователь"
+			           HorizontalAlignment="Center">
+			</TextBlock>
+		</DockPanel>
+
 
 		<DataGrid Margin="20" ItemsSource="{Binding Products}"
                   GridLinesVisibility="All"
@@ -44,16 +77,16 @@
                   VerticalAlignment="Stretch"
                   HorizontalAlignment="Stretch">
 			<DataGrid.Columns>
-				<DataGridTextColumn Header="ID продукта" Width="2*" MaxWidth="60"
+				<DataGridTextColumn Header="ID продукта" Width="2*" MaxWidth="60 " MinWidth="60"
                                     Binding="{Binding id}"  />
-				<DataGridTextColumn Header="Наименование продукта" Width="2*" MaxWidth="300"
+				<DataGridTextColumn Header="Наименование продукта" Width="2*" MaxWidth="280" MinWidth="280"
                                     Binding="{Binding product_name}"  />
-				<DataGridTextColumn Header="Описание"  Width="2*" MaxWidth="300"
+				<DataGridTextColumn Header="Описание"  Width="2*" MaxWidth="280" MinWidth="280"
                                     Binding="{Binding description}" />
-				<DataGridTextColumn Header="Цена"  Width="2*" MaxWidth="300"
+				<DataGridTextColumn Header="Цена"  Width="2*" MaxWidth="250" MinWidth="250"
                                     Binding="{Binding price}"    />
 
-				<DataGridTemplateColumn Header="Кол - во" Width="2*" MaxWidth="250">
+				<DataGridTemplateColumn Header="Кол - во" Width="2*" MaxWidth="230" MinWidth="230">
 					<DataGridTemplateColumn.CellTemplate>
 						<DataTemplate>
 							<ButtonSpinner  Height="20" Width="130" ButtonSpinnerLocation="Right"
@@ -64,21 +97,21 @@
 					</DataGridTemplateColumn.CellTemplate>
 				</DataGridTemplateColumn>
 
-				<DataGridTemplateColumn Header="Добавить" Width="2*" MaxWidth="100">
+				<DataGridTemplateColumn Header="Добавить" Width="2*" MaxWidth="180" MinWidth="180">
 					<DataGridTemplateColumn.CellTemplate>
 						<DataTemplate>
 							<Button Name="check_button"
 									HorizontalAlignment="Center"
 									VerticalAlignment="Center"
 									Background="#2D73FF"
-									Content="*"
+									Content="Выбрать"
 									HorizontalContentAlignment="Center"
 									VerticalContentAlignment="Top"
 									Foreground="White"
-									Width="30"
-									Height="20"
+									Width="150"
+									Height="25"
 									CornerRadius="2 "
-									FontWeight="400" FontSize="12"
+									FontWeight="500" FontSize="10"
 									BorderBrush="Transparent"
 								CommandParameter="{Binding}" />
 						</DataTemplate>
@@ -88,5 +121,5 @@
 			</DataGrid.Columns>
 			
 		</DataGrid>
-	</DockPanel>
+	</StackPanel>
 </Window>

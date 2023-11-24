@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DynamicData.Tests;
 using Microsoft.EntityFrameworkCore;
 using ZhoskaRabotaem.Models;
 
@@ -7,6 +8,7 @@ namespace ZhoskaRabotaem.Context;
 
 public partial class DimaserjioContext : DbContext
 {
+    
     public DimaserjioContext()
     {
     }

@@ -6,9 +6,14 @@ using ZhoskaRabotaem.ViewModels;
 
 namespace ZhoskaRabotaem.ViewModels
 {
-    public class MainWindowViewModel : ViewModelBase
-    {
-        public ObservableCollection<Product> Products { get; set; }
+    public class MainWindowViewModel : ViewModelBase 
+    { 
+        private ObservableCollection<Product> _products; 
+        public ObservableCollection<Product> Products 
+        { 
+            get => _products; 
+            set => _products = value; 
+        } 
 
         public MainWindowViewModel()
         {
@@ -21,6 +26,12 @@ namespace ZhoskaRabotaem.ViewModels
             {
                 Products = new ObservableCollection<Product>(context.Products);
             }
+        }
+        
+        public void AddProduct(Product newProduct) 
+        { 
+            Products.Add(newProduct);
+            InitializeData();
         }
     }
 }

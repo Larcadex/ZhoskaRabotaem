@@ -4,6 +4,7 @@
     <option name="projectPerEditor">
       <map>
         <entry key="ZhoskaRabotaem/App.axaml" value="ZhoskaRabotaem/ZhoskaRabotaem.csproj" />
+        <entry key="ZhoskaRabotaem/Views/AddeditWindow.axaml" value="ZhoskaRabotaem/ZhoskaRabotaem.csproj" />
         <entry key="ZhoskaRabotaem/Views/MainWindow.axaml" value="ZhoskaRabotaem/ZhoskaRabotaem.csproj" />
         <entry key="ZhoskaRabotaem/Views/RegWindow.axaml" value="ZhoskaRabotaem/ZhoskaRabotaem.csproj" />
       </map>

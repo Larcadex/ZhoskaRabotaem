@@ -21,21 +21,30 @@ public partial class MainWindow : Window
         if (Role)
         {
             InitializeComponent();
+            RoleBlock.Text = "Админ";
+            AddMenu.IsVisible = true;
             ((MainWindowViewModel)DataContext).InitializeData();
         }
     }
 
-    private void ButtonSpinner_Spin(object? sender, Avalonia.Controls.SpinEventArgs e)
-    {
+    private void ButtonSpinner_Spin(object? sender, Avalonia.Controls.SpinEventArgs e){
         ButtonSpinner spinner = sender as ButtonSpinner;
-
+        
         int value = Convert.ToInt32(spinner.Content);
-
-        if (e.Direction == SpinDirection.Increase)
+        
+        if (e.Direction == SpinDirection.Increase)  
             value++;
-        else
+        else if (e.Direction == SpinDirection.Decrease && value == 0) 
+            return;
+        else     
             value--;
+        
         spinner.Content = value;
+    }
 
+    private void Addmenu(object sender, RoutedEventArgs e)
+    {
+        var win = new AddeditWindow();
+        win.Show();
     }
 }

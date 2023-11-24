@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\glkho\\source\\repos\\meow\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj": {}
+    "C:\\Users\\larcades\\Desktop\\repos\\ZhoskaRabotaem\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\glkho\\source\\repos\\meow\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj": {
+    "C:\\Users\\larcades\\Desktop\\repos\\ZhoskaRabotaem\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\glkho\\source\\repos\\meow\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj",
+        "projectUniqueName": "C:\\Users\\larcades\\Desktop\\repos\\ZhoskaRabotaem\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj",
         "projectName": "ZhoskaRabotaem",
-        "projectPath": "C:\\Users\\glkho\\source\\repos\\meow\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj",
-        "packagesPath": "C:\\Users\\glkho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\glkho\\source\\repos\\meow\\ZhoskaRabotaem\\obj\\",
+        "projectPath": "C:\\Users\\larcades\\Desktop\\repos\\ZhoskaRabotaem\\ZhoskaRabotaem\\ZhoskaRabotaem.csproj",
+        "packagesPath": "C:\\Users\\larcades\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\larcades\\Desktop\\repos\\ZhoskaRabotaem\\ZhoskaRabotaem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\glkho\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\larcades\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -109,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

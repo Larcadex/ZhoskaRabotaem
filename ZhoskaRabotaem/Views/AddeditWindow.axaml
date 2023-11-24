@@ -1,0 +1,128 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="820" d:DesignHeight="390"
+        x:Class="ZhoskaRabotaem.Views.AddeditWindow"
+        Icon="/Assets/favicon.ico"
+        Title="ZhoskaRabotaem"
+        WindowStartupLocation="CenterScreen"
+        MaxHeight="300" MaxWidth="500" MinHeight="300" MinWidth="500" >
+    
+    <Window.Styles>
+        <Style Selector="Window">
+            <Setter Property="Background" Value="#181A21"/>
+            <Setter Property="Padding" Value="20"/>
+
+        </Style>
+    </Window.Styles>
+    
+    
+    
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+            
+            <StackPanel.Styles>
+                
+                <Style Selector="Button:pointerover /template/ ContentPresenter">
+                    <Setter Property="TextBlock.Foreground" Value="White"/>
+                    <Setter Property="Background" Value="#2D73FF"/>
+                </Style>
+                
+             
+                
+                <Style Selector="TextBox">
+                    <Setter Property="Background" Value="#32353c"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="CornerRadius" Value="0"/>
+                    <Setter Property="Padding" Value="10"/> 
+                </Style>
+                
+                <Style Selector="Border" >
+                    <Setter Property="Background" Value="#32353c"/>
+                </Style>
+                
+                <Style Selector="TextBox:IsPointerOver">
+                    <Setter Property="Background" Value="#32353c"/>
+                </Style>
+             
+                
+                <Style Selector="TextBlock">
+                    <Setter Property="Foreground" Value="#1999ff"/>
+                    <Setter Property="FontWeight" Value="500"/>
+                    <Setter Property="FontSize" Value="12"/> 
+                    <Setter Property="LetterSpacing" Value="0.4"/> 
+                </Style>
+                
+            </StackPanel.Styles>
+            
+            
+            <TextBlock
+                Text="Название"  
+                HorizontalAlignment="Left"
+                FontSize="10"
+                Margin="15,0,0,0"/>
+            
+            
+            <TextBox   
+                Name="ProductBox" 
+                Width="290" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Height="40"
+                Margin="0,0,0,10" 
+                />
+            
+            <TextBlock
+                Text="Описание"  
+                HorizontalAlignment="Left"
+                FontSize="10" 
+                Margin="15,0,0,0"/>
+            
+            <TextBox   
+                Name="DescBox" 
+                Width="290" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Height="40"
+                Margin="0,0,0,10" 
+                />
+            
+            <TextBlock
+                Text="Цена"  
+                HorizontalAlignment="Left"
+                FontSize="10"
+                Margin="15,0,0,0" />
+            
+            <TextBox   
+                Name="PriceBox" 
+                Width="290" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Height="40"
+                Margin="0,0,0,10"                
+                />
+            
+            
+            <Button 
+                Name="AddButton" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom"
+                Content="Добавить" 
+                Background="#2D73FF" 
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center" 
+                Foreground="White" 
+                Width="290" 
+                Height="50" 
+                CornerRadius="2 " 
+                FontWeight="400" FontSize="16" 
+                BorderBrush="Transparent"
+                Click="Addprod"
+                Margin="15"
+                />
+            
+            
+        </StackPanel>
+    
+
+</Window>
